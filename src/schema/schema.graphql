@@ -1,3 +1,59 @@
 type Query {
   helloWorld: String!
+  productConstraintInfos: [ProductConstraintInfo]!
+  productInfos(id: Int): [ProductInfo]
+}
+
+type ProductInfo {
+  id: Int!
+  version: String
+  productCode: String!
+  productFamilyId: Int!
+  productName: String!
+  productAbbreviation: String!
+  productDisplayName: String!
+  productFlag: String!
+  nimbusEnable: String!
+  starletEnable: String!
+  vcmsEnable: String!
+  manualEnable: String!
+  mastermixCode: String
+  protocolName: String
+  protocolDesc: String
+  protocolExt_1Name: String
+  protocolExt_1Desc: String
+  wtcName: String
+  productId: Int
+  releaseDate: String
+  installDatetime: String
+  jsonString: String
+}
+
+type ProductConstraintInfo {
+  productFamily: String!
+  productCode: String!
+  productId: Int!
+  productGroup: String
+  orderSequence: String
+  extractionSerialNumber: String
+  extractionFamily: String
+  extractionProtocol: String
+  samplePremix: String
+  pcrProductSerialNumber1: String
+  pcrProductSerialNumber2: String
+  icName: String
+  pcrTubeInterval: Int!
+  pcrReconstruct: Int!
+  plateTutorial: Int
+  icUse: String
+  urineCombination: String
+  inputDwpBarcode: String
+  inputPlateBarcode: String
+  pcCount: Int
+  ncCount: Int
+  sdCount: Int
+  wtcCount: Int
+  panelCount: Int
+  pcrsetupBarcode: String
+  maxSumCount: Int
 }
